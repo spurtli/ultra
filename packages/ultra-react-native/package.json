@@ -1,0 +1,66 @@
+{
+  "name": "@spurtli/ultra-react-native",
+  "version": "1.0.0",
+  "description": "Ultra components for React Native",
+  "keywords": [
+    "React",
+    "Ultra",
+    "Spurtli"
+  ],
+  "author": "Neele Barthel <hello@neele.codes>",
+  "contributors": [
+    "Hannes Moser <box@hannesmoser.at>"
+  ],
+  "homepage": "https://www.spurtli.com",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spurtli/ultra.git"
+  },
+  "scripts": {
+    "build": "lerna exec --parallel -- rollup --config",
+    "build:types": "tsc --declaration --emitDeclarationOnly",
+    "watch": "lerna exec --parallel -- rollup --config --watch",
+    "tsc": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "bugs": {
+    "url": "https://github.com/spurtli/ultra/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/node": "^12.7.12",
+    "@types/react": "^16.9.5",
+    "@types/react-native": "^0.60.19",
+    "@types/styled-components": "^4.1.19",
+    "prettier": "^1.18.2",
+    "react": "^16.10.2",
+    "react-native": "^0.61.2",
+    "rollup": "^1.23.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "styled-components": "^4.4.0",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "^16.10.2",
+    "react-native": "^0.61.2",
+    "styled-components": "^4.4.0"
+  }
+}
