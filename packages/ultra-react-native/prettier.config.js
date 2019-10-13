@@ -1,5 +1,1 @@
-const prettierConfig = require('../../prettier.config');
-
-module.exports = {
-  ...prettierConfig
-};
+module.exports = require('../../prettier.config');
