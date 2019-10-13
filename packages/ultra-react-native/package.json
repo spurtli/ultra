@@ -14,7 +14,8 @@
   "homepage": "https://www.spurtli.com",
   "license": "MIT",
   "main": "lib/index.js",
-  "typings": "lib/index.d.js",
+  "module": "lib/index.es6.js",
+  "types": "lib/index.d.js",
   "directories": {
     "lib": "lib",
     "test": "tests"
@@ -30,8 +31,11 @@
     "url": "git+https://github.com/spurtli/ultra.git"
   },
   "scripts": {
-    "build": "lerna exec --parallel -- rollup --config",
+    "build": "yarn build:bundle && yarn build:types",
+    "build:bundle": "lerna exec --parallel -- rollup --config",
     "build:types": "tsc --declaration --emitDeclarationOnly",
+    "lint": "eslint --config .eslintrc.js --ext .ts,.tsx ./src",
+    "lint:fix": "eslint --config .eslintrc.js --ext .ts,.tsx ./src --fix",
     "watch": "lerna exec --parallel -- rollup --config --watch",
     "tsc": "tsc",
     "typecheck": "tsc --noEmit"
@@ -49,6 +53,14 @@
     "@types/react": "^16.9.5",
     "@types/react-native": "^0.60.19",
     "@types/styled-components": "^4.1.19",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "expo-linear-gradient": "^7.0.1",
     "prettier": "^1.18.2",
     "react": "^16.10.2",
     "react-native": "^0.61.2",
@@ -59,6 +71,7 @@
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
+    "expo-linear-gradient": "^7.0.1",
     "react": "^16.10.2",
     "react-native": "^0.61.2",
     "styled-components": "^4.4.0"
