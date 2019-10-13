@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "module": "amd",
+    "noImplicitAny": true,
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "react"
-  },
-  "exclude": [
-    "node_modules"
-  ]
+    "jsx": "react",
+    "declaration": true,
+    "skipLibCheck": true
+  }
 }
