@@ -16,10 +16,9 @@ export default {
     }
   ],
   external: [
-    'react',
-    'react-native',
-    'styled-components/native',
-    'expo-linear-gradient'
+    ...Object.keys(pkg.dependencies),
+    ...Object.keys(pkg.peerDependencies),
+    'styled-components/native'
   ],
   plugins: [
     resolve({
