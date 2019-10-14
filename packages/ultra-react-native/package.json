@@ -36,9 +36,11 @@
     "build:types": "tsc --declaration --emitDeclarationOnly",
     "lint": "eslint --config .eslintrc.js --ext .ts,.tsx ./src",
     "lint:fix": "eslint --config .eslintrc.js --ext .ts,.tsx ./src --fix",
-    "watch": "lerna exec --parallel -- rollup --config --watch",
+    "start": "yarn watch",
     "tsc": "tsc",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "watch": "lerna exec --parallel -- rollup --config --watch",
+    "wml": "wml start"
   },
   "bugs": {
     "url": "https://github.com/spurtli/ultra/issues"
@@ -49,6 +51,7 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@babel/preset-typescript": "^7.6.0",
+    "@types/color": "^3.0.0",
     "@types/node": "^12.7.12",
     "@types/react": "^16.9.5",
     "@types/react-native": "^0.60.19",
@@ -68,12 +71,16 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-node-resolve": "^5.2.0",
     "styled-components": "^4.4.0",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "wml": "^0.0.83"
   },
   "peerDependencies": {
     "expo-linear-gradient": "^7.0.1",
     "react": "^16.10.2",
     "react-native": "^0.61.2",
     "styled-components": "^4.4.0"
+  },
+  "dependencies": {
+    "color": "^3.1.2"
   }
 }
