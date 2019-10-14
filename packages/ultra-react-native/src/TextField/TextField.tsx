@@ -1,19 +1,7 @@
 import React, {PropsWithChildren} from 'react';
 
-import styled from '../styled-components';
-
-const Label = styled.Text`
-  color: ${({theme}) => theme.colors.tintColor};
-`;
-
-const TextInput = styled.TextInput`
-  color: ${({theme}) => theme.colors.textColor};
-  font-size: 20;
-  height: 40;
-  border-bottom-color: ${({theme}) => theme.colors.tint1};
-  border-bottom-width: 1;
-  margin-bottom: 16;
-`;
+import {Label} from '../Label';
+import {TextInput} from '../TextInput';
 
 type TextFieldProps = {
   label: string;
