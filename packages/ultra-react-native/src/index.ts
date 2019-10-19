@@ -1,3 +1,4 @@
+export {Button} from './Button';
 export {Label} from './Label';
 export {Text, Variant} from './Text';
 export {TextField} from './TextField';
